@@ -23,7 +23,7 @@ function Search() {
 
           <input 
             className={cx('input')} 
-            placeholder='Tìm kiếm' 
+            placeholder='Search' 
             spellCheck='false'
           />
         </div>

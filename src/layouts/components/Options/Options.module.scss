@@ -1,0 +1,32 @@
+.wrapper {
+  flex: 1 0 127px;
+  position: relative;
+  align-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  padding-left: 24px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  color: rgb(38, 38, 38);
+
+  .inner {
+    align-items: stretch;
+    border: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 0;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    padding-left: 24px;
+    position: relative;
+    vertical-align: baseline;
+    white-space: nowrap;
+
+    .icons:not(:first-child) {
+      margin-left: 22px;
+    }
+  }
+}
