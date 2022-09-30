@@ -1,11 +1,11 @@
-import config from '~/config';
+import config from '../config';
 
 // Layouts
-// import { DefaultLayout, HeaderOnly } from '~/layouts/';
+import { DefaultLayout } from '../layouts/DefaultLayout';
 
 // Pages
-import Home from '~/pages/Home';
-import Explore from '~/pages/Explore';
+import Home from '../pages/Home';
+import Explore from '../pages/Explore';
 
 
 const publicRoutes = [
