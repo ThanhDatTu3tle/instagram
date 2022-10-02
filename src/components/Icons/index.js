@@ -85,7 +85,7 @@ export const MessengerIcon = ({ className }) => (
     ></path>
     <path
       d="M17.79 10.132a.659.659 0 00-.962-.873l-2.556 2.05a.63.63 0 01-.758.002L11.06 9.47a1.576 1.576 0 00-2.277.42l-2.567 3.98a.659.659 0 00.961.875l2.556-2.049a.63.63 0 01.759-.002l2.452 1.84a1.576 1.576 0 002.278-.42z"
-      fill-rule="evenodd"
+      fillRule="evenodd"
     ></path>
   </svg>
 );
@@ -124,9 +124,9 @@ export const PostIcon = ({ className }) => (
     <line
       fill="none"
       stroke="currentColor"
-      strokelinecap="round"
-      strokelinejoin="round"
-      strokewidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
       x1="12.003"
       x2="12.003"
       y1="6.545"
@@ -155,7 +155,7 @@ export const ExploreIcon = ({ className }) => (
       strokeLinejoin="round"
       strokeWidth="2"
     ></polygon>
-    <polygon fill-rule="evenodd" points="10.06 10.056 13.949 13.945 7.581 16.424 10.06 10.056"></polygon>
+    <polygon fillRule="evenodd" points="10.06 10.056 13.949 13.945 7.581 16.424 10.06 10.056"></polygon>
     <circle
       cx="12.001"
       cy="12.005"

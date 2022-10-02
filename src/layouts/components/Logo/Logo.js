@@ -11,7 +11,7 @@ function Logo() {
       <div className={cx('logo')}>
           {/* Logo */}
           <div className={cx('logo-img')}>
-            <img src={images.logo}/>
+            <img src={images.logo} alt='logo-img'/>
           </div>
           {/* Tippy */}
           <button className={cx('drop-btn')}>
