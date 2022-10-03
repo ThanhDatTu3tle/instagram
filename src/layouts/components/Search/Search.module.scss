@@ -1,7 +1,16 @@
+.search-result {
+  width: 375px;
+  border-radius: 20px;
+  transform-origin: top center;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 75ms linear, transform 38ms ease-out;
+}
+
 .search {
+  display: flex;
   align-items: center;
   justify-content: center;
-  display: flex;
   flex: 0 1 auto;
   flex-direction: row;
   height: 36px;
@@ -14,6 +23,10 @@
   background-color: #efefef;
 
   .search-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 10px;
   }
 
   .input {
@@ -25,9 +38,28 @@
     font-size: 1.6rem;
     height: 100%;
     outline: none;
-    padding: 3px 16px;
+    padding: 3px 0;
     width: 100%;
     z-index: 2;
+  }
+
+  .clear-btn {
+    margin-right: 10px;
+  }
+
+  .loading {
+    margin-left: 30px;
+    position: relative;
+    animation: spinner 2s linear infinite;
+  }
+
+  @keyframes spinner {
+    from {
+      transform: translateX(-50%) rotate(0);
+    }
+    to {
+      transform: translateX(-50%) rotate(360deg);
+    }
   }
 }
 

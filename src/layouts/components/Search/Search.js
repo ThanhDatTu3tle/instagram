@@ -24,6 +24,7 @@ function Search() {
   const debounced = useDebounce(searchValue, 800)
 
   const inputRef = useRef()
+  const searchIconRef = useRef()
 
   useEffect(() => {
     // debounced.trim() => loại bỏ khoảng trắng đầu cuối của searchValue
@@ -53,8 +54,8 @@ function Search() {
     }      
   }
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
+  const handleMouseDown = () => {
+    searchIconRef.current.remove()
   }
 
   return (
@@ -74,9 +75,12 @@ function Search() {
         )}
       >
         <div className={cx('search')}>
-          <button className={cx('search-btn')} onMouseDown={handleSubmit}>
-            <SearchIcon />
-          </button>
+          {!searchValue && !loading && (
+            <button ref={searchIconRef} className={cx('search-btn')}>
+              <SearchIcon />
+            </button>
+          )}
+
 
           <input 
             ref={inputRef}
@@ -85,18 +89,19 @@ function Search() {
             placeholder='Search' 
             spellCheck='false'
             onChange={handleChange}
+            onMouseDown={handleMouseDown}
             onFocus={() => setShowResult(true)}
           />
-          {!!searchValue && !loading && (
+          {!searchValue && !loading && (
             <button 
               className={cx('clear-btn')} 
               onClick={() => { 
                 setSearchValue(''); 
                 setSearchResult([]);
                 inputRef.current.focus(); 
-              }
-            }>
-                <ClearIcon />
+              }}
+            >
+              <ClearIcon />
             </button>
           )}
           {loading && <FontAwesomeIcon className={cx('loading')} icon={faSpinner}/>}
